@@ -21,6 +21,7 @@ def check_m(_m: int, _n: int) -> bool:
 
 
 def build_secv(_v: bytes, _m: int) -> List[bytes]:
+    #build the tree sequences of m, m-1 and m-2 bits
     seqs = []
     for _i in range(1, 4):
         if _m - _i > 0:
