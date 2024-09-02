@@ -72,17 +72,17 @@ center_panel = Frame(root, bg="white", width=300, height=300)
 center_panel.grid(row=1, column=1, padx=10, pady=10, sticky="n")
 center_panel.place(anchor="center", relx=0.5, rely=0.55)
 
-# Încarc și afișez imaginea în frame-ul central
-# deschid imaginea
-image = Image.open("img.jpg")
-#apoi o redimensionez
-image = image.resize((750, 650))
-#apoi creez
-photo = ImageTk.PhotoImage(image)
 
-image_label = Label(center_panel, image=photo)
-# image_label.image = photo  # Păstrează o referință pentru a evita colectarea de gunoi
-image_label.pack()
+# Încarc și afișez imaginea în frame-ul central
+# deschid imaginea cu ajutorul modulului PIL, image
+image = Image.open("img.jpg")
+image = image.resize((750, 650))
+# creez imaginea intr-un format pe care tkinter il poate afisa, cu ImageTk
+# # insa tkinter neputand manipula imaginea direct, o convertesc cu clasa PhotoImage.
+photo_tkinter = ImageTk.PhotoImage(image)
+photo_label = Label(center_panel, image = photo_tkinter)
+photo_label.grid(pady  = 0)
+
 
 label_left1 = Button(left_panel, text="Frequency test", background="cornflower blue", activebackground="DeepSkyBlue2", border=3, command=click_mbit_test)
 label_left1.grid(pady = 90, padx = 50)
