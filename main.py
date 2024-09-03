@@ -24,10 +24,9 @@ def click_monobit_test():
     token = token_entry.get().encode()
     result = monoBit(alpha, token)
     result_label.config(text = result)
-  
-  #creez label nou pentru a afisa rezultatul
   result_label = Label(right_panel, text = "", bg="beige")
   result_label.grid(pady = 0)
+  #creez label nou pentru a afisa rezultatul
   #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
   #pentru a se schimba afisasul labelului initial vid
   done_button = Button(right_panel, text = "Done", command = execute_test)
@@ -180,18 +179,29 @@ photo_tkinter = ImageTk.PhotoImage(image)
 photo_label = Label(center_panel, image = photo_tkinter)
 photo_label.grid(pady  = 0)
 
+image = Image.open("buton_1.png")
+image = image.resize((190, 70))
+photo_1 = ImageTk.PhotoImage(image)
+button_1 = Button(left_panel, image = photo_1, border = 0, bg="beige", borderwidth=0, activebackground="white", command = click_monobit_test)
+button_1.grid(pady = 87)
 
-label_left1 = Button(left_panel, text="Frequency test", background="cornflower blue", activebackground="DeepSkyBlue2", border=3, command=click_mbit_test)
-label_left1.grid(pady = 90, padx = 50)
+image = Image.open("buton_2.png")
+image = image.resize((190, 80))
+photo_2 = ImageTk.PhotoImage(image)
+button_2 = Button(left_panel, image = photo_2, border = 0, bg="beige", activebackground="white", command = click_mbit_test)
+button_2.grid(pady = 87, padx = 10)
 
-label_left2 = Button(left_panel, text="M-bit test", background="cornflower blue", activebackground="DeepSkyBlue2", border=3, command=click_monobit_test)
-label_left2.grid(pady = 110)
+image = Image.open("buton_3.png")
+image = image.resize((190, 80))
+photo_3 = ImageTk.PhotoImage(image)
+button_3 = Button(left_panel, image = photo_3, border = 0, bg="beige", activebackground="white", command = click_autocorelation)
+button_3.grid(pady = 87)
 
-label_left2 = Button(left_panel, text="Autocorelation test", background="cornflower blue", activebackground="DeepSkyBlue2", border=3, command = click_autocorelation)
-label_left2.grid(pady = 110)
-
-label_left2 = Button(left_panel, text="Serial test", background="cornflower blue", activebackground="DeepSkyBlue2", border=3, command=click_serial)
-label_left2.grid(pady = 110)
+image = Image.open("buton_4.png")
+image = image.resize((190, 80))
+photo_4 = ImageTk.PhotoImage(image)
+button_4 = Button(left_panel, image = photo_4, border = 0, bg="beige", activebackground="white", command = click_serial)
+button_4.grid(pady = 87)
 
 right_panel = Frame(root, bg = "beige")
 right_panel.grid(sticky="nse", row=1, column=1, padx=20, pady=20)
