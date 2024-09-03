@@ -1,7 +1,7 @@
 ## NIST-security-validator
 # This project was made during the MATH4ENG summer school, an EELISA project of University Politehnica of Bucharest, and this version has the Graphical Interface improved in my journey to discover new things about Tkinter framework.
 
-![image_with the GUI](https://imgur.com/a/koHXepl)
+![image_with the GUI]https://imgur.com/a/koHXepl
 
 In this project, I aimed to implement several statistical tests of (pseudo) randomness to determine if a given (generated) binary sequence can be considered random. The practical utility of our project would be in testing the quality of pseudorandom number generators, with the results of the implemented tests being probabilistic. The four algorithms that I chose for implementation, in accordance with the requirements of the National Institute of Standards and Technology (NIST), are as follows:
 
