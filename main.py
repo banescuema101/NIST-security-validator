@@ -29,7 +29,7 @@ def click_monobit_test():
     result = monoBit(alpha, token)
     result_label.config(text = result)
   result_label = Label(right_panel, text = "", bg="beige")
-  result_label.grid(pady = 0)
+  result_label.grid(pady = 20, padx = 20)
   #creez label nou pentru a afisa rezultatul
   #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
   #pentru a se schimba afisasul labelului initial vid
@@ -117,7 +117,7 @@ def click_autocorelation():
   
   #creez label nou pentru a afisa rezultatul
   result_label = Label(right_panel, text = "", bg="beige")
-  result_label.grid(pady = 0)
+  result_label.grid(padx = 20, pady = 20)
   #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
   #pentru a se schimba afisasul labelului initial vid
   done_button = Button(right_panel, text = "Done", command = execute_test)
@@ -160,7 +160,7 @@ def click_serial():
   
   #creez label nou pentru a afisa rezultatul
   result_label = Label(right_panel, text = "", bg="beige")
-  result_label.grid(pady = 0)
+  result_label.grid(padx = 20, pady = 20)
   #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
   #pentru a se schimba afisasul labelului initial vid
   done_button = Button(right_panel, text = "Done", command = execute_test)
