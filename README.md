@@ -8,8 +8,7 @@ In this project, I aimed to implement several statistical tests of (pseudo) rand
 3. Autocorrelation Test
 4. Serial Test
 
-# The GUI has tree main panels (create with Frame class): the left one in which I add the four buttons for the user been able to begin to enter the parameters for each of the four tests, the center one with a representative image and the right one that 
-# display the labels and entrys for each test parameters that must be entered from the keyboard by the user of the app. After the user enter the parameters, he can press the ,,Done" botton at the bottom of the right frame and the conclusion of the test will be displayed in a new label from the same frame.
+# The GUI has tree main panels (create with Frame class): the left one in which I add the four buttons for the user been able to begin to enter the parameters for each of the four tests, the center one with a representative image and the right one that display the labels and entrys for each test parameters that must be entered from the keyboard by the user of the app. After the user enter the parameters, he can press the ,,Done" botton at the bottom of the right frame and the conclusion of the test will be displayed in a new label from the same frame.
 
 # Description of the functionality of the four tests:
 
