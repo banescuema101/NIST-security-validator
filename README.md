@@ -1,5 +1,5 @@
 ## NIST-security-validator
-# This project was made during the MATH4ENG summer school, an EELISA project of University Politehnica of Bucharest, and this version has the Graphical Interface improved in my journey to discover new things about Tkinter framework.
+# This project was made during the MATH4ENG summer school, an EELISA project of University Politehnica of Bucharest, and this version has a nice Graphical Interface in my journey to discover new things about Tkinter framework.
 
 ![Image_with the GUI](https://github.com/banescuema101/NIST-security-validator/blob/main/demo_picture_gui.png)
 
