@@ -1,4 +1,5 @@
 ## NIST-security-validator
+
 # This project was made during the MATH4ENG summer school, an EELISA project of University Politehnica of Bucharest, and this version has a nice Graphical Interface in my journey to discover new things about Tkinter framework.
 
 ![Image_with the GUI](https://github.com/banescuema101/NIST-security-validator/blob/main/demo_picture_gui.png)
@@ -25,7 +26,6 @@ The focus of the test is the proportion of ones within M-bit blocks. The purpose
 # Autocorrelation Test:
 
 The purpose of this test is to determine possible correlations within a sequence of n bits (non-cyclic) and its shifted version. For the sequence to be truly random, it should be independent of a new sequence obtained by a logical shift (to the left) of a given length (called the autocorrelation distance), so the degree of correlation of the generated sequence should be very small, as close to 0 as possible.
-
 
 # Serial Test:
 

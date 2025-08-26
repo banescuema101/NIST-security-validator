@@ -2,7 +2,8 @@ import math
 import scipy.stats
 
 
-def monoBit(alpha: float, token: bytes) -> str:  # returneaza ca string un mesaj de eroare/succes catre terminal
+def monoBit(alpha: float, token: bytes) -> str:  
+    # returns a success/error message as a string to the terminal
     # H0: p = 0.5 (null hypothesis)
     # HA: p != 0.5 (alternative hypothesis)
 

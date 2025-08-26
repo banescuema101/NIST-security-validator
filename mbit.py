@@ -2,7 +2,8 @@ from monobit import monoBit
 import scipy
 
 
-def mBit(alpha: float, m: int, token: bytes) -> str:  # returneaza un mesaj de eroare/succes catre terminal
+def mBit(alpha: float, m: int, token: bytes) -> str: 
+    # returns an error/success message to the terminal
     # Monobit Test
     if m == 1:
         return monoBit(alpha, token)

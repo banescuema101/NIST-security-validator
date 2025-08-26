@@ -6,7 +6,7 @@ from serial import serial
 from PIL import ImageTk, Image
 
 def click_monobit_test():
-  # Pentru inceput distrug widget-urile existente pe panoul din dreapta.
+  # First, destroy the existing widgets on the right panel.
   for widget in right_panel.winfo_children():
     widget.destroy()
 
@@ -30,15 +30,15 @@ def click_monobit_test():
     result_label.config(text = result)
   result_label = Label(right_panel, text = "", bg="beige")
   result_label.grid(pady = 20, padx = 20)
-  #creez label nou pentru a afisa rezultatul
-  #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
-  #pentru a se schimba afisasul labelului initial vid
+  # create a new label to display the result
+  # when the "Done" button is pressed, the function is executed and the label is reconfigured
+  # so that the initially empty label is updated with the result.
   done_button = Button(right_panel, text = "Done", command = execute_test)
   done_button.grid(pady = 20, padx = 20)
 
 def click_mbit_test():
-  # Pentru inceput curatam panoul din dreapta.
-  # Method winfo_children() return a list of all widgets which are children of this widget.
+  # First, clear the right panel.
+  # The winfo_children() method returns a list of all widgets that are children of this widget.
   for widget in right_panel.winfo_children():
     widget.destroy()
 
@@ -67,11 +67,11 @@ def click_mbit_test():
     result = mBit(alpha, m, token)
     result_label.config(text = result)
   
-  #creez label nou pentru a afisa rezultatul
+  # create a new label to display the result
   result_label = Label(right_panel, text = "", bg="beige")
   result_label.grid(pady = 20, padx = 20)
-  #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
-  #pentru a se schimba afisasul labelului initial vid
+  # When the "Done" button is pressed, the function is executed and the label is reconfigured
+  # so that the initially empty label is updated with the result.
   done_button = Button(right_panel, text = "Done", command = execute_test)
   done_button.grid(pady = 20, padx = 20)
 
@@ -115,11 +115,11 @@ def click_autocorelation():
     result = autocorrelation(n, token, alpha, x, y)
     result_label.config(text = result)
   
-  #creez label nou pentru a afisa rezultatul
+  # create a new label to display the result
   result_label = Label(right_panel, text = "", bg="beige")
   result_label.grid(padx = 20, pady = 20)
-  #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
-  #pentru a se schimba afisasul labelului initial vid
+  # when the "Done" button is pressed, the function is executed and the label is reconfigured
+  # so that the initially empty label is updated with the result
   done_button = Button(right_panel, text = "Done", command = execute_test)
   done_button.grid(pady = 20, padx = 20)
 
@@ -158,11 +158,11 @@ def click_serial():
     result = serial(n, token, alpha, m)
     result_label.config(text = result)
   
-  #creez label nou pentru a afisa rezultatul
+  # create a new label to display the result
   result_label = Label(right_panel, text = "", bg="beige")
   result_label.grid(padx = 20, pady = 20)
-  #in momentul in care este apasat butonul "Done", se executa functia si se reconfigureaza labelul
-  #pentru a se schimba afisasul labelului initial vid
+  # When the "Done" button is pressed, the function is executed and the label is reconfigured
+  # so that the initially empty label is updated with the result.
   done_button = Button(right_panel, text = "Done", command = execute_test)
   done_button.grid(pady = 20, padx = 20)
 
@@ -170,7 +170,7 @@ root = Tk()
 
 root.title("NIST security-validator")
 
-#setting tkinter window size
+# setting tkinter window size
 width, height = root.winfo_screenwidth(), root.winfo_screenheight()
 print("Screen width:", width)
 print("Screen height:", height)
@@ -184,9 +184,9 @@ label = Label(root, text="From the left panel, choose which test do you want to 
 label.grid(sticky = "n")
 label.place(relx = 0.32, rely = 0.05)
 
-# creez un frame in partea stanga de culoare bej unde voi amplasa butoanele
+# I create a beige frame on the left side where I will place the buttons
 left_panel = Frame(root, bg="beige", width = 500, height=1100)
-#stikcy pe nord sud west, adica tocmai in partea stanga.
+# sticky on north, south, west, meaning right on the left side.
 left_panel.grid(padx=0, pady=20, sticky="nsw")
 
 center_panel = Frame(root, bg="white", width=300, height=300)
@@ -194,35 +194,35 @@ center_panel.grid(row=1, column=1, sticky="n")
 center_panel.place(anchor="center", relx=0.5, rely=0.55)
 
 
-# Încarc și afișez imaginea în frame-ul central
-# deschid imaginea cu ajutorul modulului PIL, image
+# Load and display the image in the central frame
+# open the image using the PIL module, image
 image = Image.open("img.jpg")
 image = image.resize((650, 550))
-# creez imaginea intr-un format pe care tkinter il poate afisa, cu ImageTk
-# # insa tkinter neputand manipula imaginea direct, o convertesc cu clasa PhotoImage.
+# I create the image in a format that tkinter can display, using ImageTk
+# Since tkinter cannot manipulate the image directly, I convert it with the PhotoImage class.
 photo_tkinter = ImageTk.PhotoImage(image)
 photo_label = Label(center_panel, image = photo_tkinter)
 photo_label.grid(pady  = 0)
 
-image = Image.open("buton_1.png")
+image = Image.open("button_1.png")
 image = image.resize((190, 70))
 photo_1 = ImageTk.PhotoImage(image)
 button_1 = Button(left_panel, image = photo_1, border = 0, bg="beige", borderwidth=0, activebackground="white", command = click_monobit_test)
 button_1.grid(pady = 76)
 
-image = Image.open("buton_2.png")
+image = Image.open("button_2.png")
 image = image.resize((190, 80))
 photo_2 = ImageTk.PhotoImage(image)
 button_2 = Button(left_panel, image = photo_2, border = 0, bg="beige", activebackground="white", command = click_mbit_test)
 button_2.grid(pady = 76, padx = 10)
 
-image = Image.open("buton_3.png")
+image = Image.open("button_3.png")
 image = image.resize((190, 80))
 photo_3 = ImageTk.PhotoImage(image)
 button_3 = Button(left_panel, image = photo_3, border = 0, bg="beige", activebackground="white", command = click_autocorelation)
 button_3.grid(pady = 76)
 
-image = Image.open("buton_4.png")
+image = Image.open("button_4.png")
 image = image.resize((190, 80))
 photo_4 = ImageTk.PhotoImage(image)
 button_4 = Button(left_panel, image = photo_4, border = 0, bg="beige", activebackground="white", command = click_serial)
